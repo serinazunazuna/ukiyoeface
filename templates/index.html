@@ -1,0 +1,66 @@
+{% extends "layout.html" %} {% block content %}
+
+<!-- トップの画像 -->
+<div class="top">
+  <div class="fadeUp">
+    Ukiyoe Face
+    <br />
+    <div class="fadeUp2">あなたの顔に似ている浮世絵を教えてくれるアプリ</div>
+  </div>
+</div>
+
+<!-- 本サイトの説明 -->
+<div class="about">
+  <br /><br /><br /><br /><br />
+  <div class="fadeUp4">
+    AI and Ukiyoe. At first glance, they may seem distant, but they are close.
+    <br />
+    This product has the desire to create a new connection
+    <br />
+    by crossing technology and Japanese culture.
+  </div>
+  <br />
+  <div class="fadeUp4">
+    AIと浮世絵。一見、遠そうで近いのかもしれない。
+    <br />
+    このプロダクトにはテクノロジーと日本文化を掛け合わせ、
+    <br />
+    新しいコネクトを生み出したいという想いがある。
+  </div>
+  <p class="image">
+    <img src="/static/frame2.png" />
+  </p>
+</div>
+
+<!-- 画像アップロード手順 -->
+<div class="enter_btn">
+  <div class="content">
+    <br />
+    <div class="fadeUp5">Upload a photo of your face!</div>
+    <div class="fadeUp5">まず、あなたの顔写真をアップロードしてください</div>
+    <br />
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <p>
+        <label>
+          ⒈Select image
+          <input
+            type="file"
+            id="upload_file"
+            name="upload_file"
+            multiple="multiple"
+            class="button2"
+          />
+        </label>
+      </p>
+      <br />
+      <div class="fadeUp5">Let's look for similar Ukiyoe!</div>
+      <div class="fadeUp5">では、似ている浮世絵を探してみましょう</div>
+      <br />
+      <p>
+        <input type="submit" value="⒉Upload" class="button" />
+      </p>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
